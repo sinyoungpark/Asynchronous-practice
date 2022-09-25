@@ -54,3 +54,18 @@ order(2000, () => console.log(`${stocks.Fruits[0]} was selected`))
 .then(() => {
     return order(2000, () => console.log("serve ice cream"));
 })
+/*
+error handling use catch handler
+1. 오직 promise가 reject될 때만 실행된다. 
+
+*/
+.catch((error) => {
+    console.error("customer left");
+})
+/*
+.finally handler
+1. this will run whether resolved or rejected
+*/
+.finally(() => {
+    console.log('day ended, show is closed');
+});
